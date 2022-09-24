@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Book My Seat</title>
+        <script src="ticket.js"></script>
+        <link rel="stylesheet" href="ticket.css"/>
+    </head>
+
+    <body>
+        <h1>Book your seats</h1>     
+        <div id="seats">
+            <select id="seattype">
+                <option class ='seattype' value="Executive">Executive</option>
+                <option value="Premium">Premium</option>                    
+            </select>
+            
+            <input  type="number" id="num" placeholder="Number of seats" onclick="return tickets()" value=""> 
+            <button class="select" id="select" onclick="SelectSeats()" disabled>Select Seats</button>          
+                
+            <table id="tab">
+                <td>Premium</td>
+                <tr>
+                    <td></td>
+                    <td>1</td>
+                    <td>2</td>
+                    <td>3</td>
+                    <td>4</td>
+                    <td>5</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>6</td>
+                    <td>7</td>
+                    
+                </tr>
+                
+                <tr>
+                    <td>A</td>
+                    <td><input type="checkbox"  class="pseats" value="A1" disabled ></td>
+                    <td><input type="checkbox" class="pseats" value="A2" disabled></td>
+                    <td><input type="checkbox" class="pseats" value="A3" disabled></td>
+                    <td><input type="checkbox"  class="pseats" value="A4" disabled></td>
+                    <td><input type="checkbox"  class="pseats" value="A5" disabled></td>
+                    <td class="seatGap"></td>
+                    <td class="seatGap"></td>
+                    <td class="seatGap"></td>
+                    <td class="seatGap"></td>
+                    <td><input type="checkbox"  class="pseats" value="A6" disabled></td>
+                    <td><input type="checkbox"  class="pseats" value="A7" checked></td>
+                </tr>
+
+                <tr>
+                    <td>B</td>
+                    <td><input type="checkbox"  class="pseats" value="B1" disabled></td>
+                    <td><input type="checkbox"  class="pseats" value="B2" disabled></td>
+                    <td><input type="checkbox"  class="pseats" value="B3" disabled></td>
+                    <td><input type="checkbox"  class="pseats" value="B4" disabled></td>
+                    <td><input type="checkbox"  class="pseats" value="B5" disabled></td>
+                    <td class="seatGap"></td>
+                    <td class="seatGap"></td>
+                    <td class="seatGap"></td>
+                    <td class="seatGap"></td>
+                    <td><input type="checkbox"  class="pseats" value="B6" disabled></td>
+                    <td><input type="checkbox"  class="pseats" value="B7" disabled></td>
+                </tr>
+                
+
+               <td>Executive</td>
+
+                <tr>
+                        <td>C</td>
+                        <td><input type="checkbox"  class="eseats" value="C1" disabled></td>
+                        <td><input type="checkbox"  class="eseats" value="C2" disabled></td>
+                        <td><input type="checkbox"  class="eseats" value="C3" disabled></td>
+                        <td><input type="checkbox"  class="eseats" value="C4" disabled></td>
+                        <td><input type="checkbox"  class="eseats" value="C5" disabled></td>
+                        <td class="seatGap"></td>
+                        <td class="seatGap"></td>
+                        <td class="seatGap"></td>
+                        <td class="seatGap"></td>
+                        <td><input type="checkbox"  class="eseats" value="C6" disabled></td>
+                        <td><input type="checkbox"  class="eseats" value="C7" disabled></td>
+                 </tr>
+
+                 <tr>
+                    <td>D</td>
+                    <td><input type="checkbox"  class="eseats" value="D1" disabled></td>
+                    <td><input type="checkbox"  class="eseats" value="D2"disabled></td>
+                    <td><input type="checkbox"  class="eseats" value="D3" disabled></td>
+                    <td><input type="checkbox"  class="eseats" value="D4" disabled></td>
+                    <td><input type="checkbox"  class="eseats" value="D5" disabled></td>
+                    <td class="seatGap"></td>
+                    <td class="seatGap"></td>
+                    <td class="seatGap"></td>
+                    <td class="seatGap"></td>
+                    <td><input type="checkbox"  class="eseats" value="D6" disabled></td>
+                    <td><input type="checkbox"  class="eseats" value="D7" disabled></td>
+                </tr>                        
+
+                <tr>
+                    <td>E</td>
+                    <td><input type="checkbox"  class="eseats" value="E1" disabled></td>
+                    <td><input type="checkbox"  class="eseats" value="E2" disabled></td>
+                    <td><input type="checkbox"  class="eseats" value="E3" disabled></td>
+                    <td><input type="checkbox"  class="eseats" value="E4" disabled></td>
+                    <td><input type="checkbox"  class="eseats" value="E5" disabled></td>
+                    <td class="seatGap"></td>
+                    <td class="seatGap"></td>
+                    <td class="seatGap"></td>
+                    <td class="seatGap"></td>
+                    <td><input type="checkbox"  class="eseats" value="E6" disabled></td>
+                    <td><input type="checkbox"  class="eseats" value="E7" disabled></td>
+                </tr>
+
+                <tr>
+                    <td>F</td>
+                    <td><input type="checkbox"  class="eseats" value="F1" disabled></td>
+                    <td><input type="checkbox"   class="eseats" value="F2" disabled></td>
+                    <td><input type="checkbox"   class="eseats" value="F3" disabled></td>
+                    <td><input type="checkbox"   class="eseats" value="F4" checked disabled></td>
+                    <td><input type="checkbox"   class="eseats" value="F5" checked disabled></td>
+                    <td class="seatGap"></td>
+                    <td class="seatGap"></td>
+                    <td class="seatGap"></td>
+                    <td class="seatGap"></td>
+                    <td><input type="checkbox"   class="eseats" value="F6"disabled></td>
+                    <td><input type="checkbox"  class="eseats" value="F7"disabled></td>
+                </tr>  
+                <button onclick="book()">Book</button>          
+            </table>
+            
+            <div class="display">
+                Type: <p id="type"></p>
+                Seats:<p id="number"></p>
+            </div>           
+
+            <button class="checkout" onclick="checkout()">CheckOut</button>
+        </div> 
+    </body>
+</html>

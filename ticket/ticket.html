@@ -12,11 +12,11 @@
         <h1>Book your seats</h1>     
         <div id="seats">
             <select id="seattype">
-                <option class ='seattype' value="Executive">Executive</option>
-                <option value="Premium">Premium</option>                    
+                <option value="Executive">Executive</option>
+                <option value="Premium">Premium</option>              
             </select>
             
-            <input  type="number" id="num" placeholder="Number of seats" onclick="return tickets()" value=""> 
+            <input  type="number" id="num" placeholder="Number of seats" onclick="tickets()" value=""> 
             <button class="select" id="select" onclick="SelectSeats()" disabled>Select Seats</button>          
                 
             <table id="tab">
@@ -34,7 +34,6 @@
                     <td></td>
                     <td>6</td>
                     <td>7</td>
-                    
                 </tr>
                 
                 <tr>
@@ -133,8 +132,10 @@
             </table>
             
             <div class="display">
-                Type: <p id="type"></p>
+                Type: <p id="type"></p>  
                 Seats:<p id="number"></p>
+                Seat number:<p id="snum"></p>
+               
             </div>           
 
             <button class="checkout" onclick="checkout()">CheckOut</button>

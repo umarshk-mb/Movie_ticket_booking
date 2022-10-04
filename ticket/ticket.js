@@ -1,26 +1,26 @@
 /* Function for enableing seat selecting button, 
 if the seat input number is greater than zero.*/
-function tickets(){
-    var x = document.getElementById("num").value;
-    if (x<1){
-        document.getElementById("select").disabled = true;
-        document.getElementById("select").style.backgroundColor = 'grey';        
-        return
-           
-    }
-    else {
+
+function tickets(){  
+    let number = document.getElementById("num").value;  
+    if (number>=1){
         document.getElementById("select").disabled = false; 
         document.getElementById("select").style.color = 'white';
-        document.getElementById("select").style.backgroundColor = 'tomato'; 
-        return       
+        document.getElementById("select").style.backgroundColor = 'tomato';                   
+    }
+    else {
+        document.getElementById("select").disabled = true;
+        document.getElementById("select").style.backgroundColor = 'grey'; 
+               
     }
 }
 
 //Function to enable seat selection.
 var seat_book;
+var val = [];
 function SelectSeats(){  
-    var x = document.getElementById("seattype").value;
-    var y = document.getElementById("num").value;
+    let x = document.getElementById("seattype").value;
+    let y = document.getElementById("num").value;
 
     //taking user input as Execuitve or Premium and enables to select.
     if(x=='Executive'){
@@ -29,7 +29,8 @@ function SelectSeats(){
         seat_book[i].disabled = false;        
     }  
     for (var i=0 ; i<y ; i++){         
-        seat_book[i].checked = true;       
+        seat_book[i].checked = true;     
+        val.push(seat_book[i].value);  
     } 
     }
 
@@ -39,7 +40,8 @@ function SelectSeats(){
         seat_book[i].disabled = false;
     }
     for (var i=0 ; i<y ; i++){         
-        seat_book[i].checked = true;       
+        seat_book[i].checked = true;     
+        val.push(seat_book[i].value);  
     }
 
 }
@@ -49,8 +51,8 @@ function SelectSeats(){
 //function to display type and number of seat selected.
 function book(){
     document.getElementById("type").innerHTML = document.getElementById("seattype").value;
-    document.getElementById("number").innerHTML = document.getElementById("num").value;
-   
+    document.getElementById("number").innerHTML = document.getElementById("num").value; 
+    document.getElementById('snum').innerHTML = val;  
 }
 
 

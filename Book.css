@@ -5,7 +5,7 @@
 
 body{
     position: fixed;
-    background-image: url('/images/bg.jpg');
+    background-image: url('https://images.pexels.com/photos/1105666/pexels-photo-1105666.jpeg?auto=compress&cs=tinysrgb&w=600');
     background-repeat: no-repeat;
     background-size: cover;
     width:100%;
